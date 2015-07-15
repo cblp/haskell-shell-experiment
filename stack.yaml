@@ -1,5 +1,6 @@
 flags: {}
 packages:
 - '.'
-extra-deps: []
+extra-deps:
+- HSH-2.1.2
 resolver: lts-2.18
