@@ -1,4 +1,4 @@
-import HSH
+import HSH ( runIO )
 
 main :: IO ()
 main = do
