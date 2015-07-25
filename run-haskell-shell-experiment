@@ -1,5 +1,5 @@
 #!/bin/bash
 set -eux
 
-stack build
+stack --jobs=2 build
 stack exec haskell-shell-experiment
