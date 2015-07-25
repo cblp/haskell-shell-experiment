@@ -1,6 +1,11 @@
-import HSH ( runIO )
+import HSH            ( runIO )
+import Criterion.Main ( bench, bgroup, defaultMain, nfIO )
+
+runTrue :: IO ()
+runTrue = runIO "true"
 
 main :: IO ()
-main = do
-    runIO "cat LICENSE | grep I | wc -l"
-    runIO "grep I LICENSE -c"
+main = defaultMain
+    [ bgroup "HSH"  [ bench "true" $ nfIO runTrue
+                    ]
+    ]
